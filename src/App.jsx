@@ -19,25 +19,32 @@ function App() {
   const [Category, setCategory] = useState("general");
 
   // Function to fetch news articles from NewsAPI based on user-selected parameters
-  async function fetchLocal() {
-    try {
-      const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${Country}&q=${search}&category=${Category}&pageSize=40&apiKey=${apiKey}`
-      );
-      const result = await response.json();
-
-      // Update state with fetched data
-      setData(result.articles);
-    } catch (error) {
-      console.error(error);
-
-      // Handle errors by updating error state
-      setError(true);
-    } finally {
-      // Set loading state to false after fetching or encountering an error
-      setLoading(false);
-    }
+async function fetchLocal() {
+  if (!apiKey) {
+    console.error('API key is missing. Please provide a valid API key.');
+    setError(true);
+    setLoading(false);
+    return;
   }
+
+  try {
+    const response = await fetch(
+      `https://newsapi.org/v2/top-headlines?country=${Country}&q=${search}&category=${Category}&pageSize=40&apiKey=${apiKey}`
+    );
+    const result = await response.json();
+
+    // Update state with fetched data
+    setData(result.articles);
+  } catch (error) {
+    console.error(error);
+
+    // Handle errors by updating error state
+    setError(true);
+  } finally {
+    // Set loading state to false after fetching or encountering an error
+    setLoading(false);
+  }
+}
 
   // UseEffect hook to trigger data fetching when Country or Category state changes
   useEffect(() => {
