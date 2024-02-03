@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ #foto {
+  transform: scale(1);
+  transition: transform 3ms ease-in-out;
+}
+
+#card:hover #foto {
+  transform: scale(0.991);
+}
+
+#card {
+  overflow: hidden;
+}
+
+@keyframes yuki {
+  25% {
+    transform: scale(0.995);
+  }
+  50% {
+    transform: scale(0.994);
+  }
+  75% {
+    transform: scale(0.993);
+  }
+  100% {
+    transform: scale(0.992);
+  }
+}
+/* @media (max-width:1034px) {
+
+
+  margin: 5%;
+} */
+
+
+#sbar{
+  width: 18rem;
+  margin: auto;
+}
+
+
+#warn{
+ height: 75dvh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#waner{
+color: grey;
+font: bolder;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.5rem;
+
+}
+
+@media (max-width:600px) {
+  #warn{
+ height: 68dvh;
+}
+}
