@@ -1,7 +1,8 @@
 <h1>SilverInsight - React News WebApp 📰</h1>
 
 <p>Welcome to SilverInsight, an engaging React web application designed for aspiring developers to dive into the world of functional components and dynamic, responsive web development. Whether you're a beginner or an intermediate React enthusiast, this project provides a fantastic opportunity to enhance your skills.</p>
-
+<h2> Warning</h2>
+The following project won't run without an API Key. Get your API key from [NewsAPI](`https://newsapi.org/`)
 <h2>About SilverInsight</h2>
 
   <p>SilverInsight harnesses the power of React's functional components to create a sleek and user-friendly news web application. Leveraging the NewsAPI, it dynamically fetches and displays the latest news articles, providing users with a real-time, up-to-date news experience.</p>
