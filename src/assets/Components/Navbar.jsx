@@ -1,5 +1,5 @@
 import React from "react";
-import Image from './img/Navbar.svg';
+import Image from "./img/Navbar.svg";
 
 // Navbar component receives setCountry and setCategory functions as props
 function Navbar({ setCountry, setCategory }) {
@@ -72,7 +72,47 @@ function Navbar({ setCountry, setCategory }) {
                       India
                     </a>
                   </li>
-                  {/* ... (similar entries for other countries) */}
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => {
+                        setCountry(`us`);
+                      }}
+                    >
+                      United States
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => {
+                        setCountry(`cn`);
+                      }}
+                    >
+                      China
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => {
+                        setCountry(`jp`);
+                      }}
+                    >
+                      Japan
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => {
+                        setCountry(`kr`);
+                      }}
+                    >
+                      Korea
+                    </a>
+                  </li>
+                  {/* ... (Try to add other countries too in same manner to practice) */}
                 </ul>
               </li>
 
@@ -86,7 +126,7 @@ function Navbar({ setCountry, setCategory }) {
                 >
                   Category
                 </a>
-                <ul className="dropdown-menu">
+                <ul  className="dropdown-menu">
                   {/* Individual Category Options */}
                   <li>
                     <a
@@ -94,6 +134,38 @@ function Navbar({ setCountry, setCategory }) {
                       onClick={() => setCategory(`general`)}
                     >
                       General
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => setCategory(`technology`)}
+                    >
+                      Technology
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => setCategory(`health`)}
+                    >
+                      Health
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => setCategory(`science`)}
+                    >
+                      Science
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => setCategory(`entertainment`)}
+                    >
+                      Entertainment
                     </a>
                   </li>
                 </ul>
