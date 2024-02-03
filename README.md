@@ -22,7 +22,7 @@
 
   <ol>
         <li><strong>Clone the Repository:</strong></li>
-        <pre><code>git clone https://github.com/your-username/SilverInsight.git
+        <pre><code>git clone https://github.com/PankajKDev/SilverInsight.git
 cd SilverInsight</code></pre>
 
    <li><strong>Install Dependencies:</strong></li>
