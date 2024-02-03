@@ -30,12 +30,9 @@
     transform: scale(0.992);
   }
 }
-/* @media (max-width:1034px) {
-
-
-  margin: 5%;
-} */
-
+.dropdown-item{
+  cursor: pointer;
+}
 
 #sbar{
   width: 18rem;
